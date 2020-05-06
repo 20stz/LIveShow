@@ -23,7 +23,7 @@ namespace LiveShow.Api
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly("LiveShow.Dal"))
+                    b => b.MigrationsAssembly($"LiveShow.Dal"))
             );
 
             services.AddControllers();
