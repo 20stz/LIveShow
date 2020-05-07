@@ -8,10 +8,15 @@ namespace LiveShow.Dal.Models
         public long Id { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string FirstName { get; set; }
 
         [MaxLength(100)]
+        [Required]
         public string LastName { get; set; }
+
+        [Required]
+        public UserType Type { get; set; }
 
         public ICollection<Following> Followers { get; set; }
 
